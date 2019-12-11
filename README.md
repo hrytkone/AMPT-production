@@ -4,7 +4,7 @@ Simulation code meant to be run using Slurm.
 
 ## Content:
 * Ampt (directory)
-    * Contains the AMPT code (myweb.ecu.edu/linz/ampt/)
+    * Contains the AMPT code ([myweb.ecu.edu/linz/ampt/](myweb.ecu.edu/linz/ampt/))
     * For now on the energy must be changed here in the input.ampt file
 * ampt-run (directory)
     * submit.sh
