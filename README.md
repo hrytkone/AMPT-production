@@ -11,5 +11,6 @@ Simulation code meant to be run using Slurm.
         * used to submit jobs, give number of jobs and number of events here
     * run
         * script where AMPT and run macro are run
+        * CHANGE HERE THE PATHS BEFORE RUNNING!
     * AmptToNTuple.C
         * ROOT macro that creates TNtuple from AMPT output file
