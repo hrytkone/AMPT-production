@@ -1,7 +1,7 @@
 #!/bin/bash
 
-amptdir=/n/work00/heimarry/ampt/Ampt/
-amptrundir=/n/work00/heimarry/ampt/ampt-run/
+amptdir=PATH_TO_AMPT-production-DIRECTORY/Ampt/
+amptrundir=PATH_TO_AMPT-production-DIRECTORY/ampt-run/
 tempdir=${amptrundir}ampt_job_${1}
 
 mkdir $tempdir
