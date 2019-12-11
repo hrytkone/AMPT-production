@@ -1,0 +1,258 @@
+ 
+           ##################################################
+           #      AMPT (A Multi-Phase Transport) model      #
+           #          Version 2.26t9b (StringMelting)       #
+           #               12/25/2018                       #
+           ##################################################
+            
+ # Read in NSEED in HIJING at run time (e.g. 20030819):
+ #   read in:      9165936
+
+
+          **************************************************
+          *     |      |       _______      /  ------/     *
+          *   ----- ------     |_____|     /_/     /       *
+          *    |||    /        |_____|      /    / |       *
+          *    /| |  /_/       /_______    /_  /    |      *
+          *   / |     / /     /  /  / |        -------     *
+          *     |    / /|       /  /  |     /     |        *
+          *     |   / /  |     /  /  _|    /   -------     *
+          *                                                *
+          **************************************************
+                                HIJING                      
+                 Heavy Ion Jet INteraction Generator        
+                                  by                        
+                      X. N. Wang  and  M. Gyulassy           
+                       Lawrence Berkeley Laboratory           
+
+
+     MDCY(C221,1)   changed from              1 to              0
+     MDCY(C313,1)   changed from              1 to              0
+     MDCY(C-313,1)  changed from              0 to              0
+     MDCY(C323,1)   changed from              1 to              0
+     MDCY(C-323,1)  changed from              0 to              0
+     MDCY(C311,1)   changed from              1 to              0
+     MDCY(C-311,1)  changed from              0 to              0
+     MDCY(C1114,1)  changed from              1 to              0
+     MDCY(C2114,1)  changed from              1 to              0
+     MDCY(C2214,1)  changed from              1 to              0
+     MDCY(C2224,1)  changed from              1 to              0
+     MDCY(C-1114,1) changed from              0 to              0
+     MDCY(C-2114,1) changed from              0 to              0
+     MDCY(C-2214,1) changed from              0 to              0
+     MDCY(C-2224,1) changed from              0 to              0
+     MDCY(C213,1)   changed from              1 to              0
+     MDCY(C-213,1)  changed from              0 to              0
+     MDCY(C113,1)   changed from              1 to              0
+     MDCY(C223,1)   changed from              1 to              0
+     MDCY(C333,1)   changed from              1 to              0
+     MDCY(C111,1)   changed from              1 to              0
+     MDCY(C310,1)   changed from              1 to              0
+     MDCY(C411,1)   changed from              1 to              0
+     MDCY(C-411,1)  changed from              0 to              0
+     MDCY(C421,1)   changed from              1 to              0
+     MDCY(C-421,1)  changed from              0 to              0
+     MDCY(C431,1)   changed from              1 to              0
+     MDCY(C-431,1)  changed from              0 to              0
+     MDCY(C511,1)   changed from              1 to              0
+     MDCY(C-511,1)  changed from              0 to              0
+     MDCY(C521,1)   changed from              1 to              0
+     MDCY(C-521,1)  changed from              0 to              0
+     MDCY(C531,1)   changed from              1 to              0
+     MDCY(C-531,1)  changed from              0 to              0
+     MDCY(C3122,1)  changed from              1 to              0
+     MDCY(C-3122,1) changed from              0 to              0
+     MDCY(C3112,1)  changed from              1 to              0
+     MDCY(C-3112,1) changed from              0 to              0
+     MDCY(C3212,1)  changed from              1 to              0
+     MDCY(C-3212,1) changed from              0 to              0
+     MDCY(C3222,1)  changed from              1 to              0
+     MDCY(C-3222,1) changed from              0 to              0
+     MDCY(C3312,1)  changed from              1 to              0
+     MDCY(C-3312,1) changed from              0 to              0
+     MDCY(C3322,1)  changed from              1 to              0
+     MDCY(C-3322,1) changed from              0 to              0
+     MDCY(C3334,1)  changed from              1 to              0
+     MDCY(C-3334,1) changed from              0 to              0
+     MDCY(C441,1)   changed from              1 to              0
+     MDCY(C443,1)   changed from              1 to              0
+     MDCY(C413,1)   changed from              1 to              0
+     MDCY(C-413,1)  changed from              0 to              0
+     MDCY(C423,1)   changed from              1 to              0
+     MDCY(C-423,1)  changed from              0 to              0
+     MDCY(C433,1)   changed from              1 to              0
+     MDCY(C-433,1)  changed from              0 to              0
+     MDCY(C4112,1)  changed from              1 to              0
+     MDCY(C-4112,1) changed from              0 to              0
+     MDCY(C4114,1)  changed from              1 to              0
+     MDCY(C-4114,1) changed from              0 to              0
+     MDCY(C4122,1)  changed from              1 to              0
+     MDCY(C-4122,1) changed from              0 to              0
+     MDCY(C4212,1)  changed from              1 to              0
+     MDCY(C-4212,1) changed from              0 to              0
+     MDCY(C4214,1)  changed from              1 to              0
+     MDCY(C-4214,1) changed from              0 to              0
+     MDCY(C4222,1)  changed from              1 to              0
+     MDCY(C-4222,1) changed from              0 to              0
+     MDCY(C4224,1)  changed from              1 to              0
+     MDCY(C-4224,1) changed from              0 to              0
+     MDCY(C4132,1)  changed from              1 to              0
+     MDCY(C-4132,1) changed from              0 to              0
+     MDCY(C4312,1)  changed from              1 to              0
+     MDCY(C-4312,1) changed from              0 to              0
+     MDCY(C4314,1)  changed from              1 to              0
+     MDCY(C-4314,1) changed from              0 to              0
+     MDCY(C4232,1)  changed from              1 to              0
+     MDCY(C-4232,1) changed from              0 to              0
+     MDCY(C4322,1)  changed from              1 to              0
+     MDCY(C-4322,1) changed from              0 to              0
+     MDCY(C4324,1)  changed from              1 to              0
+     MDCY(C-4324,1) changed from              0 to              0
+     MDCY(C4332,1)  changed from              1 to              0
+     MDCY(C-4332,1) changed from              0 to              0
+     MDCY(C4334,1)  changed from              1 to              0
+     MDCY(C-4334,1) changed from              0 to              0
+     MDCY(C551,1)   changed from              1 to              0
+     MDCY(C553,1)   changed from              1 to              0
+     MDCY(C513,1)   changed from              1 to              0
+     MDCY(C-513,1)  changed from              0 to              0
+     MDCY(C523,1)   changed from              1 to              0
+     MDCY(C-523,1)  changed from              0 to              0
+     MDCY(C533,1)   changed from              1 to              0
+     MDCY(C-533,1)  changed from              0 to              0
+     MDCY(C5112,1)  changed from              1 to              0
+     MDCY(C-5112,1) changed from              0 to              0
+     MDCY(C5114,1)  changed from              1 to              0
+     MDCY(C-5114,1) changed from              0 to              0
+     MDCY(C5122,1)  changed from              1 to              0
+     MDCY(C-5122,1) changed from              0 to              0
+     MDCY(C5212,1)  changed from              1 to              0
+     MDCY(C-5212,1) changed from              0 to              0
+     MDCY(C5214,1)  changed from              1 to              0
+     MDCY(C-5214,1) changed from              0 to              0
+     MDCY(C5222,1)  changed from              1 to              0
+     MDCY(C-5222,1) changed from              0 to              0
+     MDCY(C5224,1)  changed from              1 to              0
+     MDCY(C-5224,1) changed from              0 to              0
+          **************************************************
+          *                                                *
+          *         HIJING has been initialized at         *
+          *             Ecm =     200.00 GeV/n             *
+          *                                                *
+          *        for A   (208, 82) + A   (208, 82)       *
+          **************************************************
+  EVENT            1 , RUN            1
+ #impact parameter,nlop,ncolt=  0.647598445               0        1196
+ In PYINIT: BEAM,TARGET= P               N               
+
+ ******** PYMAXI: summary of differential cross-section maximum search ********
+
+           ==========================================================
+           I                                      I                 I
+           I  ISUB  Subprocess name               I  Maximum value  I
+           I                                      I                 I
+           ==========================================================
+           I                                      I                 I
+           I   11   f + f' -> f + f'              I    4.9718E+00   I
+           I   12   f + fb -> f' + fb'            I    5.7342E-03   I
+           I   13   f + fb -> g + g               I    6.8549E-02   I
+           I   14   f + fb -> g + gamma           I    8.3283E-04   I
+           I   18   f + fb -> gamma + gamma       I    3.3438E-06   I
+           I   28   f + g -> f + g                I    2.2202E+01   I
+           I   29   f + g -> f + gamma            I    7.4919E-03   I
+           I   53   g + g -> f + fb               I    1.9216E-01   I
+           I   68   g + g -> g + g                I    2.5880E+01   I
+           I   81   q + qb -> Q + QB, massive     I    3.6768E-03   I
+           I   82   g + g -> Q + QB, massive      I    1.0604E-01   I
+           I                                      I                 I
+           ==========================================================
+ In PYINIT: BEAM,TARGET= P               P               
+
+ ******** PYMAXI: summary of differential cross-section maximum search ********
+
+           ==========================================================
+           I                                      I                 I
+           I  ISUB  Subprocess name               I  Maximum value  I
+           I                                      I                 I
+           ==========================================================
+           I                                      I                 I
+           I   11   f + f' -> f + f'              I    4.9850E+00   I
+           I   12   f + fb -> f' + fb'            I    5.7342E-03   I
+           I   13   f + fb -> g + g               I    6.8549E-02   I
+           I   14   f + fb -> g + gamma           I    8.9451E-04   I
+           I   18   f + fb -> gamma + gamma       I    3.7609E-06   I
+           I   28   f + g -> f + g                I    2.2202E+01   I
+           I   29   f + g -> f + gamma            I    7.8743E-03   I
+           I   53   g + g -> f + fb               I    1.9216E-01   I
+           I   68   g + g -> g + g                I    2.5880E+01   I
+           I   81   q + qb -> Q + QB, massive     I    3.6768E-03   I
+           I   82   g + g -> Q + QB, massive      I    1.0604E-01   I
+           I                                      I                 I
+           ==========================================================
+ In PYINIT: BEAM,TARGET= N               N               
+
+ ******** PYMAXI: summary of differential cross-section maximum search ********
+
+           ==========================================================
+           I                                      I                 I
+           I  ISUB  Subprocess name               I  Maximum value  I
+           I                                      I                 I
+           ==========================================================
+           I                                      I                 I
+           I   11   f + f' -> f + f'              I    4.9850E+00   I
+           I   12   f + fb -> f' + fb'            I    5.7342E-03   I
+           I   13   f + fb -> g + g               I    6.8549E-02   I
+           I   14   f + fb -> g + gamma           I    7.5542E-04   I
+           I   18   f + fb -> gamma + gamma       I    2.8969E-06   I
+           I   28   f + g -> f + g                I    2.2202E+01   I
+           I   29   f + g -> f + gamma            I    7.0693E-03   I
+           I   53   g + g -> f + fb               I    1.9216E-01   I
+           I   68   g + g -> g + g                I    2.5880E+01   I
+           I   81   q + qb -> Q + QB, massive     I    3.6768E-03   I
+           I   82   g + g -> Q + QB, massive      I    1.0604E-01   I
+           I                                      I                 I
+           ==========================================================
+ In PYINIT: BEAM,TARGET= N               P               
+
+ ******** PYMAXI: summary of differential cross-section maximum search ********
+
+           ==========================================================
+           I                                      I                 I
+           I  ISUB  Subprocess name               I  Maximum value  I
+           I                                      I                 I
+           ==========================================================
+           I                                      I                 I
+           I   11   f + f' -> f + f'              I    4.9718E+00   I
+           I   12   f + fb -> f' + fb'            I    5.7342E-03   I
+           I   13   f + fb -> g + g               I    6.8549E-02   I
+           I   14   f + fb -> g + gamma           I    8.3283E-04   I
+           I   18   f + fb -> gamma + gamma       I    3.3438E-06   I
+           I   28   f + g -> f + g                I    2.2202E+01   I
+           I   29   f + g -> f + gamma            I    7.4919E-03   I
+           I   53   g + g -> f + fb               I    1.9216E-01   I
+           I   68   g + g -> g + g                I    2.5880E+01   I
+           I   81   q + qb -> Q + QB, massive     I    3.6768E-03   I
+           I   82   g + g -> Q + QB, massive      I    1.0604E-01   I
+           I                                      I                 I
+           ==========================================================
+ satisfied:EATT(GeV),NATT,B(fm)=   41656.6016            5422  0.647598445    
+  
+  EVENT            2 , RUN            1
+ #impact parameter,nlop,ncolt=   1.43391299               0        1073
+ satisfied:EATT(GeV),NATT,B(fm)=   41668.3828            5303   1.43391299    
+  
+  EVENT            3 , RUN            1
+ #impact parameter,nlop,ncolt=   2.22046494               0        1040
+  in HJANA1 
+  total number of partons =         1488
+  total number of gluons =         1421
+  number of independent strings =           42
+  in HJANA2 
+  total number of partons =        11086
+  total number of gluons =            0
+  number of independent strings =         5175
+ satisfied:EATT(GeV),NATT,B(fm)=   41650.3125            4800   2.22046494    
+  
+phys1806-l01.phys.jyu.fi
+#  AMPT started at  Mon Dec 9 16:59:36 EET 2019
+#  AMPT Program finished at  Mon Dec 9 17:00:26 EET 2019
