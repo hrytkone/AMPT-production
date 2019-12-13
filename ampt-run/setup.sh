@@ -1,1 +1,1 @@
-export AMPT_DIR=/n/work00/heimarry/AMPT-production/
+export AMPT_DIR=/PUT_RELEVANT_PATH_HERE/AMPT-production/
