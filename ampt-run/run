@@ -1,7 +1,7 @@
 #!/bin/bash
 
-amptdir=PATH_TO_AMPT-production-DIRECTORY/Ampt/
-amptrundir=PATH_TO_AMPT-production-DIRECTORY/ampt-run/
+amptdir=$AMPT_DIR/Ampt/
+amptrundir=$AMPT_DIR/ampt-run/
 tempdir=${amptrundir}ampt_job_${1}
 
 mkdir $tempdir
@@ -11,7 +11,9 @@ cd $tempdir
 seed=1000
 jobid=$SLURM_JOB_ID
 seed=$((seed+jobid))
+sed -i "1s/.*/${4}     ! EFRM (sqrt(S_NN) in GeV if FRAME is CMS)/" input.ampt
 sed -i "9s/.*/${3}     ! NEVNT (total number of events)/" input.ampt
+sed -i "28s/.*/0     ! ihjsed: take HIJING seed from below (D=0) or at runtime(11)/" input.ampt
 sed -i "29s/.*/${seed}     ! random seed for HIJING/" input.ampt
 
 time=$(date)
@@ -29,6 +31,9 @@ echo "Done!"
 
 time=$(date)
 echo "End time : $time"
+
+jobnum=$(printf "%02d" $1)
+mv ampt-output${jobnum}.root ${5}/ampt-output${jobnum}.root
 
 rm -r $tempdir
 rm ampt${1}.dat
