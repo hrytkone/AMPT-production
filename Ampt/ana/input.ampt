@@ -1,4 +1,4 @@
-200            ! EFRM (sqrt(S_NN) in GeV if FRAME is CMS)
+50            ! EFRM (sqrt(S_NN) in GeV if FRAME is CMS)
 CMS             ! FRAME
 A               ! PROJ
 A               ! TARG
@@ -6,7 +6,7 @@ A               ! TARG
 82              ! IZP (projectile Z number)
 208             ! IAT (target A number)
 82              ! IZT (target Z number)
-3 	    ! NEVNT (total number of events)
+10 	    ! NEVNT (total number of events)
 0.              ! BMIN (mininum impact parameter in fm) 
 3.		! BMAX (maximum impact parameter in fm, also see below)
 4		! ISOFT (D=4): select Default AMPT or String Melting(see below)
@@ -26,7 +26,7 @@ A               ! TARG
 1d6		! dpcoal in GeV
 1d6		! drcoal in fm
 11		! ihjsed: take HIJING seed from below (D=0)or at runtime(11)
-13150909	! random seed for HIJING
+200       ! random seed for HIJING
 8		! random seed for parton cascade
 0		! flag for K0s weak decays (D=0,no; 1,yes)
 1		! flag for phi decays at end of hadron cascade (D=1,yes; 0,no)
