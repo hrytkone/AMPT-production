@@ -6,7 +6,7 @@
            ##################################################
             
  # Read in NSEED in HIJING at run time (e.g. 20030819):
- #   read in:     12111520
+ #   read in:      7125157
 
 
           **************************************************
@@ -129,3 +129,158 @@
      MDCY(C5212,1)  changed from              1 to              0
      MDCY(C-5212,1) changed from              0 to              0
      MDCY(C5214,1)  changed from              1 to              0
+     MDCY(C-5214,1) changed from              0 to              0
+     MDCY(C5222,1)  changed from              1 to              0
+     MDCY(C-5222,1) changed from              0 to              0
+     MDCY(C5224,1)  changed from              1 to              0
+     MDCY(C-5224,1) changed from              0 to              0
+          **************************************************
+          *                                                *
+          *         HIJING has been initialized at         *
+          *             Ecm =      50.00 GeV/n             *
+          *                                                *
+          *        for A   (208, 82) + A   (208, 82)       *
+          **************************************************
+  EVENT            1 , RUN            1
+ #impact parameter,nlop,ncolt=   6.29309654               0         429
+ In PYINIT: BEAM,TARGET= P               N               
+
+ ******** PYMAXI: summary of differential cross-section maximum search ********
+
+           ==========================================================
+           I                                      I                 I
+           I  ISUB  Subprocess name               I  Maximum value  I
+           I                                      I                 I
+           ==========================================================
+           I                                      I                 I
+           I   11   f + f' -> f + f'              I    1.0950E+00   I
+           I   12   f + fb -> f' + fb'            I    1.5179E-03   I
+           I   13   f + fb -> g + g               I    1.1188E-02   I
+           I   14   f + fb -> g + gamma           I    1.6273E-04   I
+           I   18   f + fb -> gamma + gamma       I    6.3984E-07   I
+           I   28   f + g -> f + g                I    5.4185E+00   I
+           I   29   f + g -> f + gamma            I    1.3712E-03   I
+           I   53   g + g -> f + fb               I    4.5267E-02   I
+           I   68   g + g -> g + g                I    6.5441E+00   I
+           I   81   q + qb -> Q + QB, massive     I    8.2297E-04   I
+           I   82   g + g -> Q + QB, massive      I    1.7751E-02   I
+           I                                      I                 I
+           ==========================================================
+ In PYINIT: BEAM,TARGET= P               P               
+
+ ******** PYMAXI: summary of differential cross-section maximum search ********
+
+           ==========================================================
+           I                                      I                 I
+           I  ISUB  Subprocess name               I  Maximum value  I
+           I                                      I                 I
+           ==========================================================
+           I                                      I                 I
+           I   11   f + f' -> f + f'              I    1.1209E+00   I
+           I   12   f + fb -> f' + fb'            I    1.5179E-03   I
+           I   13   f + fb -> g + g               I    1.1188E-02   I
+           I   14   f + fb -> g + gamma           I    1.8856E-04   I
+           I   18   f + fb -> gamma + gamma       I    7.6185E-07   I
+           I   28   f + g -> f + g                I    5.4185E+00   I
+           I   29   f + g -> f + gamma            I    1.4314E-03   I
+           I   53   g + g -> f + fb               I    4.5267E-02   I
+           I   68   g + g -> g + g                I    6.5441E+00   I
+           I   81   q + qb -> Q + QB, massive     I    8.2297E-04   I
+           I   82   g + g -> Q + QB, massive      I    1.7751E-02   I
+           I                                      I                 I
+           ==========================================================
+ In PYINIT: BEAM,TARGET= N               N               
+
+ ******** PYMAXI: summary of differential cross-section maximum search ********
+
+           ==========================================================
+           I                                      I                 I
+           I  ISUB  Subprocess name               I  Maximum value  I
+           I                                      I                 I
+           ==========================================================
+           I                                      I                 I
+           I   11   f + f' -> f + f'              I    1.1209E+00   I
+           I   12   f + fb -> f' + fb'            I    1.5179E-03   I
+           I   13   f + fb -> g + g               I    1.1188E-02   I
+           I   14   f + fb -> g + gamma           I    1.3001E-04   I
+           I   18   f + fb -> gamma + gamma       I    4.5400E-07   I
+           I   28   f + g -> f + g                I    5.4232E+00   I
+           I   29   f + g -> f + gamma            I    1.2759E-03   I
+           I   53   g + g -> f + fb               I    4.5267E-02   I
+           I   68   g + g -> g + g                I    6.5441E+00   I
+           I   81   q + qb -> Q + QB, massive     I    8.2297E-04   I
+           I   82   g + g -> Q + QB, massive      I    1.7751E-02   I
+           I                                      I                 I
+           ==========================================================
+ In PYINIT: BEAM,TARGET= N               P               
+
+ ******** PYMAXI: summary of differential cross-section maximum search ********
+
+           ==========================================================
+           I                                      I                 I
+           I  ISUB  Subprocess name               I  Maximum value  I
+           I                                      I                 I
+           ==========================================================
+           I                                      I                 I
+           I   11   f + f' -> f + f'              I    1.0950E+00   I
+           I   12   f + fb -> f' + fb'            I    1.5179E-03   I
+           I   13   f + fb -> g + g               I    1.1188E-02   I
+           I   14   f + fb -> g + gamma           I    1.6273E-04   I
+           I   18   f + fb -> gamma + gamma       I    6.3984E-07   I
+           I   28   f + g -> f + g                I    5.4185E+00   I
+           I   29   f + g -> f + gamma            I    1.3712E-03   I
+           I   53   g + g -> f + fb               I    4.5267E-02   I
+           I   68   g + g -> g + g                I    6.5441E+00   I
+           I   81   q + qb -> Q + QB, massive     I    8.2297E-04   I
+           I   82   g + g -> Q + QB, massive      I    1.7751E-02   I
+           I                                      I                 I
+           ==========================================================
+ satisfied:EATT(GeV),NATT,B(fm)=   10379.3574            1655   6.29309654    
+  
+  EVENT            2 , RUN            1
+ #impact parameter,nlop,ncolt=   6.93769693               0         322
+ satisfied:EATT(GeV),NATT,B(fm)=   10354.2227            1420   6.93769693    
+  
+  EVENT            3 , RUN            1
+ #impact parameter,nlop,ncolt=   6.41998291               0         447
+ satisfied:EATT(GeV),NATT,B(fm)=   10386.5918            1664   6.41998291    
+  
+  EVENT            4 , RUN            1
+ #impact parameter,nlop,ncolt=   6.17086792               0         467
+ satisfied:EATT(GeV),NATT,B(fm)=   10384.2900            1694   6.17086792    
+  
+  EVENT            5 , RUN            1
+ #impact parameter,nlop,ncolt=   6.91936588               0         325
+ satisfied:EATT(GeV),NATT,B(fm)=   10358.9873            1539   6.91936588    
+  
+  EVENT            6 , RUN            1
+ #impact parameter,nlop,ncolt=   6.90481472               0         312
+ satisfied:EATT(GeV),NATT,B(fm)=   10379.3721            1336   6.90481472    
+  
+  EVENT            7 , RUN            1
+ #impact parameter,nlop,ncolt=   6.11146212               0         531
+ satisfied:EATT(GeV),NATT,B(fm)=   10388.8984            1722   6.11146212    
+  
+  EVENT            8 , RUN            1
+ #impact parameter,nlop,ncolt=   6.60968304               0         445
+ satisfied:EATT(GeV),NATT,B(fm)=   10384.9785            1617   6.60968304    
+  
+  EVENT            9 , RUN            1
+ #impact parameter,nlop,ncolt=   6.45435762               0         510
+ satisfied:EATT(GeV),NATT,B(fm)=   10382.7178            1681   6.45435762    
+  
+  EVENT           10 , RUN            1
+ #impact parameter,nlop,ncolt=   6.48965597               0         454
+  in HJANA1 
+  total number of partons =           72
+  total number of gluons =           66
+  number of independent strings =            6
+  in HJANA2 
+  total number of partons =         3070
+  total number of gluons =            0
+  number of independent strings =         1588
+ satisfied:EATT(GeV),NATT,B(fm)=   10362.8096            1558   6.48965597    
+  
+phys1806-l01.phys.jyu.fi
+#  AMPT started at  Tue Jan 7 12:51:57 EET 2020
+#  AMPT Program finished at  Tue Jan 7 12:52:22 EET 2020
