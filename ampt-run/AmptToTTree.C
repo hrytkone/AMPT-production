@@ -1,5 +1,5 @@
 /**
- * ROOT macro for saving ampt.dat to NTuple
+ * ROOT macro for saving ampt.dat to Tree
  */
 
 // Function from pythia code
@@ -82,6 +82,6 @@ void AmptToTTree(int jobNumber, int eventStartId) {
 
    fclose(fIn);
 
-   fOut->Write();
+   tree->Write("", TObject::kOverwrite);
    fOut->Close();
 }

@@ -21,7 +21,7 @@ void AmptToNTuple(int jobNumber, int eventStartId) {
     TString outFileName(Form("ampt-output%02i.root", jobNumber));
     TFile *fOut = new TFile(outFileName, "RECREATE");
 
-    TNtuple *ntuple = new TNtuple("ntuple", "data from ampt.dat", "eventId:particleId:px:py:pz:x:y:z:isHadron:charge");
+    TNtuple *ntuple = new TNtuple("amptEvents", "data from ampt.dat", "eventId:particleId:px:py:pz:x:y:z:isHadron:charge");
 
     // Event variables
     Int_t ncols = 0, eventid = 0, test = 0, ntracks = 0, npart1 = 0, npart2 = 0,
@@ -56,6 +56,6 @@ void AmptToNTuple(int jobNumber, int eventStartId) {
 
    fclose(fIn);
 
-   fOut->Write();
+   ntuple->Write("", TObject::kOverwrite);
    fOut->Close();
 }
