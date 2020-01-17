@@ -13,6 +13,8 @@ jobid=$SLURM_JOB_ID
 seed=$((seed+jobid))
 sed -i "1s/.*/${4}     ! EFRM (sqrt(S_NN) in GeV if FRAME is CMS)/" input.ampt
 sed -i "9s/.*/${3}     ! NEVNT (total number of events)/" input.ampt
+sed -i "10s/.*/${5}     ! BMIN (mininum impact parameter in fm)/" input.ampt
+sed -i "11s/.*/${6}     ! BMAX (maximum impact parameter in fm, also see below)/" input.ampt
 sed -i "28s/.*/0     ! ihjsed: take HIJING seed from below (D=0) or at runtime(11)/" input.ampt
 sed -i "29s/.*/${seed}     ! random seed for HIJING/" input.ampt
 

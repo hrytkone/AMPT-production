@@ -2,7 +2,7 @@
 
 if [ "$1" == "-h" ]
 then
-    echo "Usage: `basename $0` comment njobs[=1] nevents[=1] energy[=50 (give in GeV)]"
+    echo "Usage: `basename $0` comment njobs[=1] nevents[=1] energy[=50 (give in GeV)] bmin[=6.05 (give in fm)] bmax[=6.98 (give in fm)]"
     exit 0
 fi
 
@@ -42,6 +42,6 @@ mkdir ${outputdir}/logs
 for (( i=1; i<=$njobs; i++ ))
 do
     eventfirst=$(((i-1)*nevents))
-    sbatch -o ${outputdir}/logs/log$i -e ${outputdir}/logs/errout$i -J ampt -n 1 run $i $eventfirst $nevents $energy $outputdir
+    sbatch -o ${outputdir}/logs/log$i -e ${outputdir}/logs/errout$i -J ampt -n 1 run $i $eventfirst $nevents $energy $bmin $bmax $outputdir
     sleep 1
 done
