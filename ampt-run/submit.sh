@@ -35,6 +35,20 @@ else
     energy=$4
 fi
 
+if [ -z "$5" ]
+then
+    bmin=6.05
+else
+    bmin=$5
+fi
+
+if [ -z "$6" ]
+then
+    bmax=6.98
+else
+    bmax=$6
+fi
+
 outputdir=run_${1}_n$(($njobs * $nevents))_${energy}GeV
 mkdir $outputdir
 mkdir ${outputdir}/logs
