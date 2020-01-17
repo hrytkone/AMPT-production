@@ -37,5 +37,5 @@ echo "End time : $time"
 jobnum=$(printf "%02d" $1)
 mv ampt-output${jobnum}.root ${7}/ampt-output${jobnum}.root
 
-#rm -r $tempdir
+rm -r $tempdir
 rm ampt${1}.dat
