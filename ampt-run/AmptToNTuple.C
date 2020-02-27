@@ -21,7 +21,14 @@ void AmptToNTuple(int jobNumber, int eventStartId) {
     TString outFileName(Form("ampt-output%02i.root", jobNumber));
     TFile *fOut = new TFile(outFileName, "RECREATE");
 
-    TNtuple *ntuple = new TNtuple("amptEvents", "data from ampt.dat", "eventId:particleId:px:py:pz:x:y:z:isHadron:charge");
+    bool bSaveb = 0;
+
+    TNtuple *ntuple;
+    if (bSaveb) {
+        ntuple = new TNtuple("amptEvents", "data from ampt.dat", "eventId:particleId:px:py:pz:x:y:z:isHadron:charge:b");
+    } else {
+        ntuple = new TNtuple("amptEvents", "data from ampt.dat", "eventId:particleId:px:py:pz:x:y:z:isHadron:charge");
+    }
 
     // Event variables
     Int_t ncols = 0, eventid = 0, test = 0, ntracks = 0, npart1 = 0, npart2 = 0,
@@ -48,7 +55,11 @@ void AmptToNTuple(int jobNumber, int eventStartId) {
             if (TMath::Abs(particleid) != 42) {
                 charge = TDatabasePDG::Instance()->GetParticle(particleid)->Charge();
                 if (charge!=0) { //Only charged particles
-                    ntuple->Fill(eventStartId + eventid, particleid, px, py, pz, x, y, z, ishadron, charge);
+                    if (bSaveb) {
+                        ntuple->Fill(eventStartId + eventid, particleid, px, py, pz, x, y, z, ishadron, charge, b);
+                    } else {
+                        ntuple->Fill(eventStartId + eventid, particleid, px, py, pz, x, y, z, ishadron, charge);
+                    }
                 }
             }
         }
